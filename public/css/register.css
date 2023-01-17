@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: roboto,sans-serif;
+    background: #ebebeb;
+
+}
+header{
+    background-color:#EAC926;
+    box-shadow:2px 2px 6px rgb(0,0,0,0.43);
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__nav{
+    display: none;
+}
+.nav__ul__li{
+    list-style: none;
+}
+.nav__ul__li a{
+    text-decoration: none;
+    color: #000;
+}
+.burger-menu{
+    margin: auto;
+    text-align: center;
+}
+.burger-menu i{
+    background-color:#1259c3;;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    padding-top: 6px;
+    border-radius: 5px;
+}
+
+.header__input{
+    position: relative;
+    width: 100%
+}
+.header__input input{
+    width: 80vw;
+}
+.header__input i{
+    position: absolute;
+    top: 5px;
+    left:230px ;
+}
+
+.main__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+    padding-top: 20px;
+}
+.main__form div{
+    width: 80%;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.input-text{
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+
+}
+.form__date,
+.interest__input{
+    margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    gap :10px;
+
+}
+.profile__input{
+    margin-top: 5px;
+    display: flex;
+    gap: 20px;
+
+}
+.form__profile label,
+.form__interest label,
+.form__archive label{
+    display: block;
+    font-weight:bold ;
+}
+.form__button{
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+.form__button button{
+    background-color: #1259c3;
+    width: 50%;
+    border-radius: 4px;
+    color: #FFF;
+    border: none;
+    height: 4vh;
+}
+.form__archive{
+    display: flex;
+    flex-direction: column;
+}
+

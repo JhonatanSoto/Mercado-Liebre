@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4dc869e85.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Roboto:ital@1&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__titulo">
+            <img width="100px" src="./img/logo-mercado-liebre.svg" alt="">
+            <div class="header__input">
+                <input type="search" class="input-text" placeholder="Busque el articulo">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h4 class="subtitulo"><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</h4>
+        </div>
+        </div>
+        <nav class="header__nav">
+            <ul class="nav__ul">
+                <li class="nav__ul__li"><a href="#">Ofertas</a></li>
+                <li class="nav__ul__li"><a href="#">Tiendas Oficiales</a></li>
+                <li class="nav__ul__li"><a href="#">Vender</a></li>
+                <li class="nav__ul__li"><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="nav__ul">
+                <li class="nav__ul__li"><a href="#">Crear una cuenta <i class="fa-regular fa-id-card"></i></a></li>
+                <li class="nav__ul__li"><a href="#">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li class="nav__ul__li"><a href="#">Mis compreas <i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <!-- form -->
+    <main>
+        <form action="/register" method="post" class="main__form">
+            <div class="form__input inputs">
+                <input class="input-text" type="text" name="nombre" placeholder="Nombre y apellido">
+                <input class="input-text" type="text" name="user" placeholder="Nombre de usuario">
+                <input class="input-text" type="email" name="email" placeholder="E-mail">    
+            </div>
+            <div class="form__date ">
+                <label for="date" class="label__subtittle">Fecha de nacimiento</label>
+                <input class="input-text" type="date" name="date">
+                <input class="input-text" type="text" name="address" placeholder="domicilio">    
+            </div>
+            
+            <div class="form__profile">
+                <label for="profileUSer" class="label__subtittle">Perfil del usuario</label>
+                <div class="profile__input">
+                    <p><input type="radio" name="comprador" id="">Comprador</p>
+                    <p><input type="radio" name="vendedor" id="">Vendedor</p>
+                </div>
+            </div>
+            <div class="form__interest">
+                <label for="interests" class="label__subtittle"> Intereses</label>
+                <div class="interest__input">
+                <p><input type="checkbox">Electro</p>
+                <p><input type="checkbox">Moda</p>
+                <p><input type="checkbox">Hogar</p>
+                <p><input type="checkbox">Jugueteria</p>
+                <p><input type="checkbox">Vida sana</p>
+                </div>   
+            </div>
+            <div class="form__archive">
+                <label for="xd" class="label__subtittle">Foto de usuario</label>
+                <input type="file" class="input__file" accept="jpg,png">
+            </div>
+            <div class="form__pass inputs">
+                <input type="pass" class="input-text" placeholder="Contraseña">
+                <input type="pass" class="input-text" placeholder="Repita contraseña">
+            </div>
+            <div class="form__button">
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>
