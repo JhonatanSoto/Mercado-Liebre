@@ -297,8 +297,19 @@ main h2{
     .section__article:hover{
         box-shadow: 1px 0 3px 4px rgb(58, 57, 57,0.4);
     }
+    .article__descripcion{
+        gap: 10px;
+    }
     .slide{
         margin-top: 9%;
+    }
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .footer div{
+        width: 30%
     }
 
 
