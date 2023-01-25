@@ -15,17 +15,18 @@ main{
 }
 
 header{
-    background-color:#EAC926;
+    background-color:#fff159;
     position: fixed;
     width: 100%;
     z-index: 1;
     top: 0;
 
 }
-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.img-web{
+    display: none;
+}
+.img-mobile{
+    width: 40px;
 }
 .header__nav{
     display: none;
@@ -38,50 +39,98 @@ section{
     color: #000;
 }
 .burger-menu{
-    margin: auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.burger-menu i{
-    background-color:#1259c3;;
-    color: #FFF;
-    width: 30px;
-    height: 30px;
-    padding-top: 6px;
-    border-radius: 5px;
+.header__titulo{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6vh;
 }
 
 .header__input{
-    position: relative;
-    width: 100%
-}
-.header__input input{
-    width: 80vw;
+    width: 65%;
+    background-color: #1259c3;
+    
 }
 .header__input i{
     position: absolute;
-    top: 5px;
-    left:230px ;
-}
-.input-text{
-
-    width: 80%;
-    height: 5vh;
+    top: 9px;
+    left:76% ;
+    color: gray;
+} 
+ .input-text{
+    width: 100%;
+    height: 4.5vh;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     padding-left: 10px;
     outline: none;
+    box-shadow:  0 1px 2px 0px rgba(88, 83, 83, 0.633);
 }
-.section__ofertas{
-    margin-top: 120px;
+.subtitulo{
+    text-align: center;
+    font-weight: 500 ;
+    font-size: 15px;
 }
-.section__ofertas img{
+.slide{
+    margin-top: 13%;
+    width: 100%;
+    overflow: hidden;
+
+
+}
+.slide ul{
+    width: 500%;
+    display: flex;
+    list-style: none;
+    animation: slide 20s infinite alternate ease-in-out;
+
+}
+nav ul .caja{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+}
+img{
     width: 100%;
 }
+/* .caja1{background-color: black;}
+.caja2{background-color: white;}
+.caja3{background-color: blue;}
+.caja4{background-color: green;}
+.caja5{background-color: yellow;} */
 
+@keyframes slide {
+    0%{ margin-left: 0%;}
+    15%{margin-left: 0%;}
+    
+    20%{margin-left: -100%;}
+    35%{margin-left: -100%;}
+
+    40%{margin-left: -200%;}
+    55%{margin-left: -200%;}
+
+    60%{margin-left: -300%;}
+    75%{margin-left: -300% ;}
+
+    80%{margin-left: -400%;}
+    100%{margin-left: -400%;}
+}
+
+main h2{
+    font-size: 20px;
+    font-weight: 500;
+}
 .section__article{
     margin: 15px;
     margin-bottom: 10px;
     background-color: #fff;
+    width: 80%;
 
 }
 .article__descripcion{
@@ -100,6 +149,7 @@ section{
     justify-content: space-between;
 }
 .descripcion__precio{
+    font-weight: 800;
     width: 30%;
 }
 .descripcion__descuento{
@@ -145,9 +195,6 @@ section{
     font-size: 14px;
 }
 @media(min-width:361px){
-    /* .article__descripcion h3{
-        display: none;
-    } */
     .header__nav{
         display: none;
     }
@@ -162,11 +209,21 @@ section{
         padding-top: 10px;
     }
     .section__article{
-        width: 45%;
+        width: 80%;
+        border-radius: 3px;
+        box-shadow: 0 0 4px rgb(100, 100, 100);
     }
 
 }
 @media(min-width:769px){
+    /* -----display:none-------- */
+    .img-mobile{display: none;}
+
+
+
+/* -------codigo WEB---------- */
+    .img-web{display:block;
+    width: 170px;}
     .section__article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);  
     }
@@ -181,28 +238,69 @@ section{
     }
     main section{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         padding-top: 10px;
     }
-    .section__article{
-        width: 20%;
+    .header{
+        padding: 5px;
     }
     .header__titulo{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
+        height: auto;
+    }
+    .header__input{
+        position: relative;
+        width: 70%;
+    }
+    .header__input input{
+        height: 6vh;
+        width: 100%;
+    }
+    .header__input i{
+        position: absolute;
+        top: 10px;
+        left: 96%;
+        color: gray;
     }
     .header__nav{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 6.5vh;
     }
     .nav__ul{
         display: flex;
+        gap: 20px;
+        padding:0 5px 0 5px;
     }
-    .nav__ul__li{
-        padding: 15px;
+    .nav__ul a{
+        color: rgb(58, 57, 57);
+        font: .7em;
     }
+    .section__ofertas{
+        margin-top: 40px;
+    }
+
+    .descripcion__name{
+        display: none;
+        transition: all 1s;
+    }
+    .section__article{
+        width: 20%;
+        box-shadow: none;
+        transition: all 300ms;
+    }
+    .section__article:hover{
+        box-shadow: 1px 0 3px 4px rgb(58, 57, 57,0.4);
+    }
+    .slide{
+        margin-top: 9%;
+    }
+
+
 }
 
